@@ -1,0 +1,238 @@
+[
+    {
+        "field": {
+            "id": "9a6bfa2e-c561-4e60-a5e3-a4633c616434",
+            "turf_id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+            "name": "Football 5v5",
+            "field_type": "Football",
+            "description": "t1",
+            "record_status": "Active",
+            "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "created_at": "2023-10-21T10:51:35.000000Z",
+            "updated_at": "2023-10-21T10:51:35.000000Z",
+            "deleted_at": null,
+            "turf": {
+                "id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+                "company_id": "9a4d7411-8dc4-4b23-ac02-2f057672a832",
+                "name": "StaidumX",
+                "email": "StaidumX@gmail.com",
+                "mobile": "+8801711167479",
+                "address": "Khulshi, CDA road no 10",
+                "district": "chittagong",
+                "description": null,
+                "fb_page": "https://www.StaidumX.com",
+                "website": "https://www.StaidumX.com",
+                "record_status": "Active",
+                "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "created_at": "2023-10-06T21:19:41.000000Z",
+                "updated_at": "2023-10-06T21:19:41.000000Z",
+                "deleted_at": null
+            }
+        },
+        "slots": [
+            {
+                "start_time": "13:00:00",
+                "end_time": "14:00:00"
+            },
+            {
+                "start_time": "14:00:00",
+                "end_time": "15:00:00"
+            },
+            {
+                "start_time": "15:00:00",
+                "end_time": "16:00:00"
+            },
+            {
+                "start_time": "16:00:00",
+                "end_time": "17:00:00"
+            },
+            {
+                "start_time": "17:00:00",
+                "end_time": "18:00:00"
+            },
+            {
+                "start_time": "18:00:00",
+                "end_time": "19:00:00"
+            }
+        ]
+    },
+    {
+        "field": {
+            "id": "9a6bfa45-ea0d-489f-a66c-072026de0c2c",
+            "turf_id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+            "name": "Football 7v7",
+            "field_type": "Football",
+            "description": "t1",
+            "record_status": "Active",
+            "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "created_at": "2023-10-21T10:51:50.000000Z",
+            "updated_at": "2023-10-21T10:51:50.000000Z",
+            "deleted_at": null,
+            "turf": {
+                "id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+                "company_id": "9a4d7411-8dc4-4b23-ac02-2f057672a832",
+                "name": "StaidumX",
+                "email": "StaidumX@gmail.com",
+                "mobile": "+8801711167479",
+                "address": "Khulshi, CDA road no 10",
+                "district": "chittagong",
+                "description": null,
+                "fb_page": "https://www.StaidumX.com",
+                "website": "https://www.StaidumX.com",
+                "record_status": "Active",
+                "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "created_at": "2023-10-06T21:19:41.000000Z",
+                "updated_at": "2023-10-06T21:19:41.000000Z",
+                "deleted_at": null
+            }
+        },
+        "slots": [
+            {
+                "start_time": "13:00:00",
+                "end_time": "14:00:00"
+            },
+            {
+                "start_time": "14:00:00",
+                "end_time": "15:00:00"
+            },
+            {
+                "start_time": "15:00:00",
+                "end_time": "16:00:00"
+            },
+            {
+                "start_time": "16:00:00",
+                "end_time": "17:00:00"
+            },
+            {
+                "start_time": "17:00:00",
+                "end_time": "18:00:00"
+            },
+            {
+                "start_time": "18:00:00",
+                "end_time": "19:00:00"
+            }
+        ]
+    },
+    {
+        "field": {
+            "id": "9a6bfa2e-c561-4e60-a5e3-a4633c616434",
+            "turf_id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+            "name": "Football 5v5",
+            "field_type": "Football",
+            "description": "t1",
+            "record_status": "Active",
+            "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "created_at": "2023-10-21T10:51:35.000000Z",
+            "updated_at": "2023-10-21T10:51:35.000000Z",
+            "deleted_at": null,
+            "turf": {
+                "id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+                "company_id": "9a4d7411-8dc4-4b23-ac02-2f057672a832",
+                "name": "StaidumX",
+                "email": "StaidumX@gmail.com",
+                "mobile": "+8801711167479",
+                "address": "Khulshi, CDA road no 10",
+                "district": "chittagong",
+                "description": null,
+                "fb_page": "https://www.StaidumX.com",
+                "website": "https://www.StaidumX.com",
+                "record_status": "Active",
+                "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "created_at": "2023-10-06T21:19:41.000000Z",
+                "updated_at": "2023-10-06T21:19:41.000000Z",
+                "deleted_at": null
+            }
+        },
+        "slots": [
+            {
+                "start_time": "13:00:00",
+                "end_time": "14:00:00"
+            },
+            {
+                "start_time": "14:00:00",
+                "end_time": "15:00:00"
+            },
+            {
+                "start_time": "15:00:00",
+                "end_time": "16:00:00"
+            },
+            {
+                "start_time": "16:00:00",
+                "end_time": "17:00:00"
+            },
+            {
+                "start_time": "17:00:00",
+                "end_time": "18:00:00"
+            },
+            {
+                "start_time": "18:00:00",
+                "end_time": "19:00:00"
+            }
+        ]
+    },
+    {
+        "field": {
+            "id": "9a6bfa45-ea0d-489f-a66c-072026de0c2c",
+            "turf_id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+            "name": "Football 7v7",
+            "field_type": "Football",
+            "description": "t1",
+            "record_status": "Active",
+            "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+            "created_at": "2023-10-21T10:51:50.000000Z",
+            "updated_at": "2023-10-21T10:51:50.000000Z",
+            "deleted_at": null,
+            "turf": {
+                "id": "9a4eae0b-a3ff-4bbb-9bd6-2aeea693bf71",
+                "company_id": "9a4d7411-8dc4-4b23-ac02-2f057672a832",
+                "name": "StaidumX",
+                "email": "StaidumX@gmail.com",
+                "mobile": "+8801711167479",
+                "address": "Khulshi, CDA road no 10",
+                "district": "chittagong",
+                "description": null,
+                "fb_page": "https://www.StaidumX.com",
+                "website": "https://www.StaidumX.com",
+                "record_status": "Active",
+                "created_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "updated_by": "9a4d7411-b0f8-41da-9a36-c75f5f36b222",
+                "created_at": "2023-10-06T21:19:41.000000Z",
+                "updated_at": "2023-10-06T21:19:41.000000Z",
+                "deleted_at": null
+            }
+        },
+        "slots": [
+            {
+                "start_time": "13:00:00",
+                "end_time": "14:00:00"
+            },
+            {
+                "start_time": "14:00:00",
+                "end_time": "15:00:00"
+            },
+            {
+                "start_time": "15:00:00",
+                "end_time": "16:00:00"
+            },
+            {
+                "start_time": "16:00:00",
+                "end_time": "17:00:00"
+            },
+            {
+                "start_time": "17:00:00",
+                "end_time": "18:00:00"
+            },
+            {
+                "start_time": "18:00:00",
+                "end_time": "19:00:00"
+            }
+        ]
+    }
+]

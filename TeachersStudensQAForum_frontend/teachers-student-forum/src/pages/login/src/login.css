@@ -1,0 +1,43 @@
+.loginBox{
+    width: 40% !important;
+    margin: 5% auto -12% auto;
+    background-color: white;
+    border-radius: 20px;
+    height: 50%;
+    @media (max-width:1425px){
+        width: 70% !important; 
+    }
+    
+}
+
+.errorMsg1{
+    font-size: 10px !important;
+    color: red;
+}
+
+.successMsg1{
+    font-size: 10px !important;
+    color: green;
+}
+
+.loginButton{
+    padding: 5px !important;
+    margin: 10px 0  !important;
+    background-color: cornflowerblue !important;
+    color: white !important;
+
+}
+
+.loginArea{
+    padding: 30px 30px;
+    @media (max-width:1425px){
+        padding: 30px 20px 
+    }
+}
+
+.titleLogin {
+    text-align: center ;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    margin-bottom: 30px !important;
+}

@@ -1,0 +1,34 @@
+.title{
+    text-align: center;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: "white";
+    padding-top: 2%;
+}
+
+.coverImage {
+    background-image: url("../assets/turfBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    opacity: 0.85;
+}
+.marketing{
+    height: 500px;
+    width: 80%;
+    margin: auto;
+}
+
+.errorMsg{
+    font-size: 10px !important;
+    color: red;
+}
+
+.searchButton {
+    margin-left: 45% !important; 
+    margin-bottom: -6% !important;
+    padding : 8px 5% !important; 
+    background-color: #ffd200 !important
+}
+
