@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { InputAdornment, Grid,  Button, IconButton, Typography, Container, Backdrop, CircularProgress } from "@mui/material";
+import { InputAdornment, Grid,  Button, IconButton, Typography, Container, Backdrop, CircularProgress, TextField } from "@mui/material";
 import './otpValidation.css';
-import { Navbar } from "src/component/navbar/src/navbar";
+import { Navbar } from "../../../component/navbar/src/navbar.tsx";
 import { useNavigate } from "react-router-dom";
 import SmartScreenIcon from '@mui/icons-material/SmartScreen';
 import CachedIcon from '@mui/icons-material/Cached';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { ResendOtp, ValidateOtp } from "src/services/src/otpService";
-import { SessionTag } from "src/services/src/Enums";
-import { localSet, localGet, localRemove } from "src/services/src/commonService";
+import { SessionTag } from "../../../services/src/Enums.ts";
+import { localSet, localGet, localRemove } from "../../../services/src/commonService.ts";
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';
-import Textfield from "src/component/form/textfield/src/textField";
 
 
 const INTIAL_FORM_STATE = {
@@ -32,24 +30,24 @@ export function OtpValidation() {
     const navigate = useNavigate()
 
     
-    async function resendOtpWeb() {
-        setBackdropOpen(true)
-        await ResendOtp(token).then((data: any) => {
-            localSet(SessionTag.OtpToken, SessionTag.OtpToken, data?.data?.token)
-            setToken(data?.data?.token)
-            setBackdropOpen(false)
-        })
-    }
-    async function sendOtp(values: any) {
-        setBackdropOpen(true)
-        await ValidateOtp(token, values?.otp).then((data: any) => {
-            setBackdropOpen(false)
-            if (data) {
-                localRemove(SessionTag.OtpToken, SessionTag.OtpToken)
-                navigate("/login")
-            }
-        })
-    }
+    // async function resendOtpWeb() {
+    //     setBackdropOpen(true)
+    //     await ResendOtp(token).then((data: any) => {
+    //         localSet(SessionTag.OtpToken, SessionTag.OtpToken, data?.data?.token)
+    //         setToken(data?.data?.token)
+    //         setBackdropOpen(false)
+    //     })
+    // }
+    // async function sendOtp(values: any) {
+    //     setBackdropOpen(true)
+    //     await ValidateOtp(token, values?.otp).then((data: any) => {
+    //         setBackdropOpen(false)
+    //         if (data) {
+    //             localRemove(SessionTag.OtpToken, SessionTag.OtpToken)
+    //             navigate("/login")
+    //         }
+    //     })
+    // }
 
     return (
         <>
@@ -86,14 +84,14 @@ export function OtpValidation() {
                             }}
                             validationSchema={FORM_VALIDATION}
                             onSubmit={values => {
-                                sendOtp(values)
+                                // sendOtp(values)
                             }}
                             >
                                 <Form>
                                 <Grid item style={{ marginBottom: "15px" }}>
 
-                            <Textfield name='otp' Placeholder="Please enter the OTP" type={showOtp ? "text" : "password"}
-                                            inputprop={{
+                            <TextField name='otp' placeholder="Please enter the OTP" type={showOtp ? "text" : "password"}
+                                            inputProps={{
                                                 endAdornment: (<InputAdornment position="end">
                                                         <IconButton onClick={() => { setShowOtp(!showOtp) }}>
                                                             {showOtp ? <VisibilityOffIcon /> : <VisibilityIcon />}
@@ -115,7 +113,7 @@ export function OtpValidation() {
                                             <Grid item>
                                                 <Button className="otpButton1" style={{ paddingRight: "10px" }} type="submit">Validate</Button>
                                                 <Button className="otpButton" onClick={() => {
-                                                    resendOtpWeb()
+                                                    // resendOtpWeb()
                                                 }}>Resend  <CachedIcon /></Button>
                                             </Grid>
                                         </Grid>

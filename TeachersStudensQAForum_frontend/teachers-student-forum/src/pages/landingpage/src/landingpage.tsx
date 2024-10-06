@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Typography, Box, Grid, Button, TextField, Autocomplete, Backdrop, CircularProgress } from "@mui/material";
 import './landingpage.css';
-import { Navbar } from "../../../component/navbar/src/navbar";
+import { Navbar } from "../../../component/navbar/src/navbar.tsx";
 import { search } from "./asset";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { MobileDatePicker } from '@mui/x-date-pickers';
@@ -9,16 +9,13 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';
 import { parseISO } from "date-fns";
-import { SessionTag } from "src/services/src/Enums";
 import { json, useNavigate } from "react-router-dom";
-import { SearchService } from "src/services/src/searchService";
-import moment from "moment";
-import { localGet, localSet } from "src/services/src/commonService";
 
 
-const districtData = require('src/data/src/bd-districts.json')
-const typeData = require('src/data/src/types.json')
-const timeData = require('src/data/src/times.json')
+
+const districtData = require('../../../data/src/bd-districts.json')
+const typeData = require('../../../data/src/types.json')
+const timeData = require('../../../data/src/times.json')
 
 
 const duration = ["60","90"]
@@ -108,18 +105,7 @@ export function Landingpage(){
         return true
       })
     }
-      const searchOp=(value: any)=>{
-        localSet("search", "searchValue", value)
-        localSet("search", "district", value.district)
-        localSet("search", "type", value.type)
-        localSet("search", "date", value.searchDate)
-        localSet("search", "startTime", value.startTime)
-        localSet("search", "endTime", value.endTime)
-        localSet("search", "duration", value.duration)
-
-        navigate("/turf/search")
-        
-      }
+      
       const endTimeConvert=(value: any)=>{
         if(value !== null){
           let x: any =[]
@@ -158,7 +144,7 @@ export function Landingpage(){
             <Box className="coverImage">
                 <Typography className="title"></Typography>
                 <Box style={{ borderRadius: "10px",padding: "20px", width: "55%", backgroundColor: "white", margin: "5% auto auto auto"}}>
-                <Formik 
+                {/* <Formik 
                 initialValues={{
                   ...INTIAL_FORM_STATE
               }}
@@ -289,7 +275,7 @@ export function Landingpage(){
                                 <Button className="searchButton" type="submit" ><img src={search} alt="" style={{height: "20px", width: "20px"}}/></Button>
                         </Form>
                       )}
-                    </Formik>
+                    </Formik> */}
                 </Box>
             </Box>
             <Box className="marketing">

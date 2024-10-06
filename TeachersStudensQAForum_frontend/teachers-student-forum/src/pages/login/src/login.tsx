@@ -1,21 +1,20 @@
 
 import React, { useState } from "react";
 //Customizable Area Start
-import { InputAdornment, IconButton, Grid, Button, Typography, Container,  Backdrop, CircularProgress } from "@mui/material";
+import { InputAdornment, IconButton, Grid, Button, Typography, Container,  Backdrop, CircularProgress, TextField } from "@mui/material";
 import './login.css';
-import { Navbar } from "src/component/navbar/src/navbar";
+import { Navbar } from "../../../component/navbar/src/navbar.tsx";
 import { json, useNavigate } from "react-router-dom";
-import { LoginService, SocialLogin } from "../../../services/src/loginService";
+// import { LoginService, SocialLogin } from "../../../services/src/loginService.tsx";
 import EmailIcon from '@mui/icons-material/Email';
 import PasswordIcon from '@mui/icons-material/Password';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import LoginIcon from '@mui/icons-material/Login';
-import { SessionTag } from "src/services/src/Enums";
-import { localSet } from "src/services/src/commonService";
+import { SessionTag } from "../../../services/src/Enums.ts";
+import { localSet } from "../../../services/src/commonService";
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';
-import Textfield from "src/component/form/textfield/src/textField";
 //Customizable Area End
 
 
@@ -65,16 +64,16 @@ export function Login() {
     async function loginDR(value: any) {
             setBackdropOpen(true)
             let email_phone = value?.emailPhone
-            await LoginService(email_phone, value?.password).then((response: any) => {
-                setBackdropOpen(false)
-                localSet(SessionTag.JwtToken, SessionTag.JwtToken, response?.data?.Authorization)
-                if (response?.code === 6001) {
-                    localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
-                    navigate("/otp")
-                } else if (response?.code === 0) {
-                    navigate("/")
-                }
-            })
+            // await LoginService(email_phone, value?.password).then((response: any) => {
+            //     setBackdropOpen(false)
+            //     localSet(SessionTag.JwtToken, SessionTag.JwtToken, response?.data?.Authorization)
+            //     if (response?.code === 6001) {
+            //         localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
+            //         navigate("/otp")
+            //     } else if (response?.code === 0) {
+            //         navigate("/")
+            //     }
+            // })
         
     }
 
@@ -121,8 +120,8 @@ export function Login() {
                                         <Grid container direction="column" justifyContent="center" alignItems="flex-start" spacing={3}>
                                             <Grid item xs={12} style={{width: "100%"}}>
                                             
-                                            <Textfield name='emailPhone' Placeholder="Email/Phone" type="text"
-                                            inputprop={{
+                                            <TextField name='emailPhone' placeholder="Email/Phone" type="text"
+                                            inputProps={{
                                                 startAdornment: (<InputAdornment position="start">
                                                 <LoginIcon/>
                                             </InputAdornment>
@@ -131,8 +130,8 @@ export function Login() {
                                              />                            
                                             </Grid>
                                             <Grid item xs={12} style={{width: "100%"}}>
-                                            <Textfield name='password' Placeholder="Password" type={showPassword ? "text" : "password"}
-                                            inputprop={{
+                                            <TextField name='password' placeholder="Password" type={showPassword ? "text" : "password"}
+                                            inputProps={{
                                                 endAdornment: (<InputAdornment position="end">
                                                         <IconButton onClick={() => { setShowPassword(!showPassword) }}>
                                                             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}

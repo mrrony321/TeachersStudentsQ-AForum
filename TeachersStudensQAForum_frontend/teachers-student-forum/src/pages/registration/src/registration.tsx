@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Grid, Button, Container, InputAdornment, IconButton, Backdrop, CircularProgress } from "@mui/material";
+import { Typography, Grid, Button, Container, InputAdornment, IconButton, Backdrop, CircularProgress, TextField } from "@mui/material";
 import './registration.css';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -8,14 +8,17 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import PlaceIcon from '@mui/icons-material/Place';
-import { Navbar } from "src/component/navbar/src/navbar";
+// import { Navbar } from "src/component/navbar/src/navbar";
+import { Navbar } from "../../../component/navbar/src/navbar.tsx";
 import { useNavigate } from "react-router-dom";
-import { RegistrationService } from "src/services/src/registrationService";
-import { SessionTag } from "src/services/src/Enums";
-import { localSet } from "src/services/src/commonService";
+// import { RegistrationService } from "src/services/src/registrationService";
+// import {RegistrationService} from "../../../services/src/registrationService.tsx"
+// import { SessionTag } from "src/services/src/Enums";
+import { SessionTag } from "../../../services/src/Enums.tsx";
+// import { localSet } from "src/services/src/commonService";
+import { localSet } from "../../../services/src/commonService.tsx";
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';
-import Textfield from "src/component/form/textfield/src/textField";
 
 const INTIAL_FORM_STATE = {
     name: '',
@@ -55,14 +58,14 @@ export function Registration() {
     }
     async function registerDR(value: any) {
             setBackdropOpen(true)
-            await RegistrationService(value?.name, value?.email, value?.password, value?.phone, value?.city).then((response: any) => {
-                setBackdropOpen(false)
+            // await RegistrationService(value?.name, value?.email, value?.password, value?.phone, value?.city).then((response: any) => {
+            //     setBackdropOpen(false)
 
-                if (response?.code === 6001) {
-                    localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
-                    navigate("/otp")
-                }
-            })
+            //     if (response?.code === 6001) {
+            //         localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
+            //         navigate("/otp")
+            //     }
+            // })
         
     }
     return (
@@ -102,8 +105,8 @@ export function Registration() {
                                     <Form>
                                     <Grid container direction="column" justifyContent="center" alignItems="flex-start" spacing={2}>
                                     <Grid item xs={12} style={{width: "100%"}}>
-                                <Textfield name='name' Placeholder="Name" type="text"
-                                            inputprop={{
+                                <TextField name='name' placeholder="Name" type="text"
+                                            inputProps={{
                                                     startAdornment: (<InputAdornment position="start">
                                                         <AccountBoxIcon />
                                                     </InputAdornment>
@@ -112,8 +115,8 @@ export function Registration() {
                                             />
                             </Grid>
                             <Grid item xs={12} style={{width: "100%"}}>
-                            <Textfield name='email' Placeholder="Email Address" type="text"
-                                            inputprop={{
+                            <TextField name='email' placeholder="Email Address" type="text"
+                                            inputProps={{
                                                 startAdornment: (<InputAdornment position="start">
                                                 <EmailIcon/>
                                             </InputAdornment>
@@ -122,8 +125,8 @@ export function Registration() {
                                              />
                             </Grid>
                             <Grid item xs={12} style={{width: "100%"}}>
-                            <Textfield name='password' Placeholder="Password" type={showPassword ? "text" : "password"}
-                                            inputprop={{
+                            <TextField name='password' placeholder="Password" type={showPassword ? "text" : "password"}
+                                            inputProps={{
                                                 endAdornment: (<InputAdornment position="end">
                                                         <IconButton onClick={() => { setShowPassword(!showPassword) }}>
                                                             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
@@ -141,8 +144,8 @@ export function Registration() {
                             </Grid>
 
                             <Grid item xs={12} style={{width: "100%"}}>
-                            <Textfield name='phone' Placeholder="Phone" type="text"
-                                            inputprop={{
+                            <TextField name='phone' placeholder="Phone" type="text"
+                                            inputProps={{
                                                 startAdornment: (<InputAdornment position="start">
                                                 <PhoneIcon/>
                                             </InputAdornment>
@@ -151,8 +154,8 @@ export function Registration() {
                                              />
                             </Grid>
                             <Grid item xs={12} style={{width: "100%"}}>
-                            <Textfield name='city' Placeholder="City" type="text"
-                                            inputprop={{
+                            <TextField name='city' placeholder="City" type="text"
+                                            inputProps={{
                                                 startAdornment: (<InputAdornment position="start">
                                                 <PlaceIcon/>
                                             </InputAdornment>

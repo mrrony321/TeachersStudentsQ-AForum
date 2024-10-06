@@ -16,14 +16,20 @@ export function Navbar() {
         alignItems="center"
         style={{ padding: "10px" }}
       >
-        <Grid item xs={1}>
+        
+        <Grid item xs={2}>
           <Box>
-            <Typography style={{ textAlign: "center" }}>Logo</Typography>
+            {/* will navigate to landing page by clicking logo */}
+            <Typography style={{ textAlign: "center" }}
+            onClick={() => {
+              redirectHome();
+            }}
+            >Teachers & Student Forum</Typography>
           </Box>
         </Grid>
         <Grid item xs={8}>
           <Grid container direction="row" spacing="4" alignItems="center">
-            <Grid item xs={2}>
+            <Grid item xs={3} style={{textAlign: 'center'}}>
               <Typography
                 onClick={() => {
                   redirectHome();
@@ -35,25 +41,13 @@ export function Navbar() {
             <Grid item xs={2}>
               <Typography>About</Typography>
             </Grid>
+            
             <Grid item xs={2}>
-              <Typography>Turf List</Typography>
-            </Grid>
-            <Grid item xs={2}>
-              <Typography>Payments</Typography>
+              <Typography>Questions</Typography>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={2}>
-          <Typography
-            style={{ textAlign: "center" }}
-            onClick={() => {
-              navigate("/onboard");
-            }}
-          >
-            Company Registration
-          </Typography>
-        </Grid>
-        <Grid item xs={1}>
           <Typography
             style={{ textAlign: "center" }}
             onClick={() => {
