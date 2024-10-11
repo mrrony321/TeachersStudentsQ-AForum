@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "F:\\New folder\\TeachersStudensQAForum\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|f:\\new folder\\teachersstudensqaforum\\dataacesslayer\\entities\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|solutionrelative:dataacesslayer\\entities\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|f:\\new folder\\teachersstudensqaforum\\dataacesslayer\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|solutionrelative:dataacesslayer\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E18146C7-17EA-4E2F-A88A-8E72972A0D09}|TeachersStudensQAForum\\PresentationLayer.csproj|f:\\new folder\\teachersstudensqaforum\\teachersstudensqaforum\\presentationlayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E18146C7-17EA-4E2F-A88A-8E72972A0D09}|TeachersStudensQAForum\\PresentationLayer.csproj|solutionrelative:teachersstudensqaforum\\presentationlayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|f:\\new folder\\teachersstudensqaforum\\dataacesslayer\\dataacesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|solutionrelative:dataacesslayer\\dataacesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
@@ -19,12 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataAcessLayer",
+              "Title": "appRole.cs",
+              "DocumentMoniker": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\entities\\appRole.cs",
+              "RelativeDocumentMoniker": "DataAcessLayer\\entities\\appRole.cs",
+              "ToolTip": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\entities\\appRole.cs",
+              "RelativeToolTip": "DataAcessLayer\\entities\\appRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T13:10:07.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appUser.cs",
+              "DocumentMoniker": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\entities\\appUser.cs",
+              "RelativeDocumentMoniker": "DataAcessLayer\\entities\\appUser.cs",
+              "ToolTip": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\entities\\appUser.cs",
+              "RelativeToolTip": "DataAcessLayer\\entities\\appUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T10:50:14.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PresentationLayer",
+              "DocumentMoniker": "F:\\New folder\\TeachersStudensQAForum\\TeachersStudensQAForum\\PresentationLayer.csproj",
+              "RelativeDocumentMoniker": "TeachersStudensQAForum\\PresentationLayer.csproj",
+              "ToolTip": "F:\\New folder\\TeachersStudensQAForum\\TeachersStudensQAForum\\PresentationLayer.csproj",
+              "RelativeToolTip": "TeachersStudensQAForum\\PresentationLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-11T06:35:49.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataAcessLayer.csproj",
               "DocumentMoniker": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\DataAcessLayer.csproj",
               "RelativeDocumentMoniker": "DataAcessLayer\\DataAcessLayer.csproj",
               "ToolTip": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\DataAcessLayer.csproj",
               "RelativeToolTip": "DataAcessLayer\\DataAcessLayer.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-08T19:12:30.044Z",
               "EditorCaption": ""

@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\New folder\\TeachersStudensQAForum\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|f:\\new folder\\teachersstudensqaforum\\dataacesslayer\\dataacesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{742BC235-5BA5-413C-9EDA-E166B55E049F}|DataAcessLayer\\DataAcessLayer.csproj|solutionrelative:dataacesslayer\\dataacesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAcessLayer",
+              "DocumentMoniker": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\DataAcessLayer.csproj",
+              "RelativeDocumentMoniker": "DataAcessLayer\\DataAcessLayer.csproj",
+              "ToolTip": "F:\\New folder\\TeachersStudensQAForum\\DataAcessLayer\\DataAcessLayer.csproj",
+              "RelativeToolTip": "DataAcessLayer\\DataAcessLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-08T19:12:30.044Z",
+              "EditorCaption": ""
             }
           ]
         }
