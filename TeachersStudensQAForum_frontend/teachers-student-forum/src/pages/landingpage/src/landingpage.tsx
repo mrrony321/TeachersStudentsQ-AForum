@@ -130,7 +130,7 @@ export function Landingpage(){
    
     return (
         <>
-        <Grid container  direction="column" justifyContent="space-between" alignItems="stretch">
+        <Grid container  direction="column" justifyContent="space-between" >
         <Grid item style={{backgroundColor: "#1a2d40", color:"white"}}>
             <Navbar/>
         </Grid>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Grid, Button, Container, InputAdornment, IconButton, Backdrop, CircularProgress, TextField } from "@mui/material";
+import { Typography, Grid, Button, Container, InputAdornment, IconButton, Backdrop, CircularProgress, TextField, Select, MenuItem } from "@mui/material";
 import './registration.css';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -29,44 +29,51 @@ const INTIAL_FORM_STATE = {
 };
 
 const FORM_VALIDATION = Yup.object().shape({
-name: Yup.string()
-    .required(),
-email: Yup.string()
-    .matches(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,"Please enter valid email")
-    .required(),
-password: Yup.string()
-    .min(8, 'Password is too short - should be 8 characters minimum.')
-    .matches(/[a-z]/, 'Password should contain atleast one lowercase letter.')
-    .matches(/[A-Z]/, 'Password should contain atleast one uppercase letter.')
-    .matches(/[0-9]/, 'Password should contain atleast one number(0~9).')
-    .matches(/[!@#$%^&*()_+\-=\]{};':"\\|,.?]+/,'Password should contain atleast one special character')
-    .required() ,
-phone: Yup.string()
-    .matches(/^(\+88-|\+88|0)?\d{11}$/,"Please use a valid phone number")
-    .required(),
-city: Yup.string()
-    .required()
+    name: Yup.string()
+        .required(),
+    email: Yup.string()
+        .matches(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/, "Please enter valid email")
+        .required(),
+    password: Yup.string()
+        .min(8, 'Password is too short - should be 8 characters minimum.')
+        .matches(/[a-z]/, 'Password should contain atleast one lowercase letter.')
+        .matches(/[A-Z]/, 'Password should contain atleast one uppercase letter.')
+        .matches(/[0-9]/, 'Password should contain atleast one number(0~9).')
+        .matches(/[!@#$%^&*()_+\-=\]{};':"\\|,.?]+/, 'Password should contain atleast one special character')
+        .required(),
+    phone: Yup.string()
+        .matches(/^(\+88-|\+88|0)?\d{11}$/, "Please use a valid phone number")
+        .required(),
+    city: Yup.string()
+        .required()
 });
 
 
 export function Registration() {
     const [showPassword, setShowPassword] = useState<boolean>(false)
     const [backdropOpen, setBackdropOpen] = useState<boolean>(false)
+    const [category, setCategory] = useState<string>('')
+    const [disabled, setDisabled] = useState<boolean>(false)
     const navigate = useNavigate()
+    function changeCategory(e: any) {
+        setCategory(e.target.value)
+        e.target.value === 'teacher' ? setDisabled(true) : setDisabled(false)
+    }
+
     function redirectSignIn() {
         navigate("/login")
     }
     async function registerDR(value: any) {
-            setBackdropOpen(true)
-            // await RegistrationService(value?.name, value?.email, value?.password, value?.phone, value?.city).then((response: any) => {
-            //     setBackdropOpen(false)
+        setBackdropOpen(true)
+        // await RegistrationService(value?.name, value?.email, value?.password, value?.phone, value?.city).then((response: any) => {
+        //     setBackdropOpen(false)
 
-            //     if (response?.code === 6001) {
-            //         localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
-            //         navigate("/otp")
-            //     }
-            // })
-        
+        //     if (response?.code === 6001) {
+        //         localSet(SessionTag.OtpToken, SessionTag.OtpToken, response?.data?.token)
+        //         navigate("/otp")
+        //     }
+        // })
+
     }
     return (
         <>
@@ -77,7 +84,7 @@ export function Registration() {
                 alignItems="stretch"
                 style={{ backgroundColor: "#EAECE7", minHeight: "100vh" }}
             >
-                <Grid item style={{backgroundColor: "#1a2d40", color:"white"}}>
+                <Grid item style={{ backgroundColor: "#1a2d40", color: "white" }}>
                     <Navbar />
                 </Grid>
                 <Grid item >
@@ -100,74 +107,94 @@ export function Registration() {
                                 onSubmit={values => {
                                     registerDR(values)
                                 }}
-                                
-                                >
-                                    <Form>
+
+                            >
+                                <Form>
                                     <Grid container direction="column" justifyContent="center" alignItems="flex-start" spacing={2}>
-                                    <Grid item xs={12} style={{width: "100%"}}>
-                                <TextField name='name' placeholder="Name" type="text"
-                                            inputProps={{
+                                    <Grid item xs={12} style={{ width: "100%" }}>
+                                            <TextField name='email' placeholder="Email Address" type="text" fullWidth
+                                                inputProps={{
                                                     startAdornment: (<InputAdornment position="start">
-                                                        <AccountBoxIcon />
+                                                        <EmailIcon />
                                                     </InputAdornment>
                                                     )
-                                            }}
+                                                }}
                                             />
-                            </Grid>
-                            <Grid item xs={12} style={{width: "100%"}}>
-                            <TextField name='email' placeholder="Email Address" type="text"
-                                            inputProps={{
-                                                startAdornment: (<InputAdornment position="start">
-                                                <EmailIcon/>
-                                            </InputAdornment>
-                                            )
-                                            }}
-                                             />
-                            </Grid>
-                            <Grid item xs={12} style={{width: "100%"}}>
-                            <TextField name='password' placeholder="Password" type={showPassword ? "text" : "password"}
-                                            inputProps={{
-                                                endAdornment: (<InputAdornment position="end">
+                                        </Grid>
+                                        <Grid item xs={12} style={{ width: "100%" }}>
+                                            <TextField name='password' placeholder="Password" type={showPassword ? "text" : "password"} fullWidth
+                                                inputProps={{
+                                                    endAdornment: (<InputAdornment position="end">
                                                         <IconButton onClick={() => { setShowPassword(!showPassword) }}>
                                                             {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
                                                         </IconButton>
-            
-            
+
+
                                                     </InputAdornment>
                                                     ),
                                                     startAdornment: (<InputAdornment position="start">
                                                         <PasswordIcon />
                                                     </InputAdornment>
                                                     )
-                                            }}
+                                                }}
                                             />
-                            </Grid>
+                                        </Grid>
+                                        <Grid item xs={12} style={{ width: "100%" }}>
+                                            <Select
+                                                labelId="demo-simple-select-label"
+                                                id="demo-simple-select"
+                                                value={category}
+                                                label="Category"
+                                                placeholder="Please select category"
+                                                onChange={changeCategory}
+                                                fullWidth
+                                            >
+                                                <MenuItem value={"student"}>Student</MenuItem>
+                                                <MenuItem value={"teacher"}>Teacher</MenuItem>
+                                            </Select>
+                                        </Grid>
+                                        <Grid item xs={12} style={{ width: "100%" }}>
 
-                            <Grid item xs={12} style={{width: "100%"}}>
-                            <TextField name='phone' placeholder="Phone" type="text"
-                                            inputProps={{
-                                                startAdornment: (<InputAdornment position="start">
-                                                <PhoneIcon/>
-                                            </InputAdornment>
-                                            )
-                                            }}
-                                             />
-                            </Grid>
-                            <Grid item xs={12} style={{width: "100%"}}>
-                            <TextField name='city' placeholder="City" type="text"
-                                            inputProps={{
-                                                startAdornment: (<InputAdornment position="start">
-                                                <PlaceIcon/>
-                                            </InputAdornment>
-                                            )
-                                            }}
-                                             />
-                            </Grid>
-                            <Grid item ><Button className="signupButton" type="submit">Sign up</Button></Grid>
-                            </Grid>
-                                    </Form>
-                                    </Formik>
-                            
+                                            <TextField name='name' placeholder="Name" type="text" fullWidth
+                                            disabled = {disabled}
+                                                inputProps={{
+                                                    startAdornment: (<InputAdornment position="start">
+                                                        <AccountBoxIcon />
+                                                    </InputAdornment>
+                                                    )
+                                                }}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} style={{ width: "100%" }}>
+
+                                            <TextField name='instituteName' placeholder="Institute Name" type="text" fullWidth
+                                            disabled = {disabled}
+                                                inputProps={{
+                                                    startAdornment: (<InputAdornment position="start">
+                                                        <AccountBoxIcon />
+                                                    </InputAdornment>
+                                                    )
+                                                }}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} style={{ width: "100%" }}>
+
+                                            <TextField name='instituteId' placeholder="Institute Id" type="text" fullWidth
+                                            disabled = {disabled}
+                                                inputProps={{
+                                                    startAdornment: (<InputAdornment position="start">
+                                                        <AccountBoxIcon />
+                                                    </InputAdornment>
+                                                    )
+                                                }}
+                                            />
+                                        </Grid>
+                                        
+                                        <Grid item ><Button className="signupButton" type="submit">Sign up</Button></Grid>
+                                    </Grid>
+                                </Form>
+                            </Formik>
+
                             <Grid item><Typography style={{ paddingTop: "30px" }}>Already signed up? Please <span style={{ color: "blue", cursor: "pointer" }} onClick={() => {
                                 redirectSignIn()
                             }}>login</span></Typography></Grid>

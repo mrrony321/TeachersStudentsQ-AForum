@@ -6,16 +6,16 @@
     padding-top: 2%;
 }
 
-.coverImage {
-    /* background-image: url("../assets/turfBackground.jpg"); */
+/* .coverImage {
+    background-image: url("../assets/turfBackground.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500px;
     opacity: 0.85;
-}
+} */
 .marketing{
-    height: 500px;
+    /* height: 500px; */
     width: 80%;
     margin: auto;
 }
