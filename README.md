@@ -1,5 +1,7 @@
 # Teachers & Student QA Forum
 
+## Branch name "master"
+
 ## Front End
  Used React.js with typescript and for the Design used material ui
 
